@@ -1,0 +1,23 @@
+ALGORITHM SENTENSE
+VAR
+    s:=STRING;
+    i:=INTEGER:=0;
+    count_word:INTEGER:=1;
+count_vow:INTEGER:=0;
+count_char:INTEGER:=1;
+BEGIN 
+    WHILE (s[i]<> ".") DO
+        i=i+1;
+        Read(s[i]);
+        count_char = count_char+1;
+        IF (s[i] = "a" OR s[i] = "A" OR s[i] = "e" OR s[i] = "E" OR s[i] = "i" OR s[i] = "I" OR s[i] = "o" OR s[i] = "O" OR s[i] = "u" OR s[i] = "U" OR s[i] = "y" OR s[i] = "Y"  ) THEN
+            count_vow += 1
+        END_IF
+        IF (s[i] =" ") THEN
+            count_word+=1
+        END_IF
+    END_WHILE
+    Write("the number of words",count_word)
+    Write("the number of vows",count_vow)
+    Write("the number of characters",count_char)
+END
